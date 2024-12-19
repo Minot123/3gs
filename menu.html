@@ -8,27 +8,35 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f9f9f9;
+            background: linear-gradient(to bottom right, #e9eff5, #cfd9e5);
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
-            padding: 40px;
             max-width: 1000px;
-            margin: 0 auto;
+            width: 100%;
+            justify-items: center;
         }
 
         .tile {
-            background: linear-gradient(145deg, #ffffff, #e6e6e6);
-            padding: 40px;
+            width: 300px;
+            height: 150px;
+            background: linear-gradient(145deg, #e3e8f0, #c9d6e6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
             border-radius: 16px;
             text-decoration: none;
-            color: #333;
-            box-shadow: 6px 6px 12px #d9d9d9, -6px -6px 12px #ffffff;
+            color: #2c3e50;
+            box-shadow: 6px 6px 12px #bcc5ce, -6px -6px 12px #ffffff;
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
@@ -40,21 +48,19 @@
 
         .tile:hover {
             transform: scale(1.08);
-            box-shadow: 8px 8px 16px #d9d9d9, -8px -8px 16px #ffffff;
-            background: linear-gradient(145deg, #e0e0e0, #f8f8f8);
+            box-shadow: 8px 8px 16px #aab3bd, -8px -8px 16px #ffffff;
+            background: linear-gradient(145deg, #d4dde7, #e6eef4);
         }
 
         .tile:active {
             transform: scale(0.95);
-            box-shadow: inset 4px 4px 8px #d1d1d1, inset -4px -4px 8px #ffffff;
+            box-shadow: inset 4px 4px 8px #aab3bd, inset -4px -4px 8px #ffffff;
         }
 
         @media (max-width: 768px) {
             .grid-container {
+                grid-template-columns: 1fr;
                 padding: 20px;
-            }
-            .tile {
-                padding: 30px;
             }
         }
     </style>
